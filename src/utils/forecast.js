@@ -14,8 +14,11 @@ const forecast = (latitude,longitude,callback) => {
             callback("Unable to find location",undefined)
     
         } else {
-    
-             callback(undefined, body.current.weather_descriptions[0]+ '...' + ' It is '+ body.current.temperature +' degrees out but it feels like '+body.current.feelslike +' degrees out and the visibility is '+body.current.visibility)
+            
+             callback(undefined,body.current.weather_descriptions[0]+ '...' 
+             + ' It is '+ body.current.temperature +' degrees out. It feels like '+body.current.feelslike + 
+             ' degrees out. The visibility is '+body.current.visibility+'. The air pressure is '+body.current.pressure+
+             '. Humidity is '+body.current.humidity + '%.')
         }
    
     
